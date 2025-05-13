@@ -1,0 +1,571 @@
+/* Common styles for both pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #050f4b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    animation: none;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Products page specific styles */
+.keyboardsgal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.keyboardsgal figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+}
+
+.keyboardsgal figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.keyboardsgal img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.keyboardsgal img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.keyboardsgal figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    margin: 0;
+    font-style: normal;
+}
+
+.keyboardsgal figure:hover figcaption {
+    transform: translateY(0);
+}
+
+pre {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+    font-family: inherit;
+}
+
+/* Index page specific styles */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: slideIn 0.5s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    animation: slideIn 0.5s ease 0.2s backwards;
+}
+
+.hero button {
+    margin: 0.5rem;
+}
+
+#dynamicButton {
+    background-color: #e74c3c;
+}
+
+.gallery-section {
+    margin: 3rem 0;
+}
+
+.gallery {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: none;
+    animation: fadeIn 0.5s ease, pulse 2s infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-img.active {
+    display: block;
+    animation: fadeIn 0.5s ease, pulse 2s infinite;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery-btn {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Contact form styles (used in both pages) */
+.contact-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-group small {
+    display: block;
+    color: #666;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.validation-message {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    min-height: 1.2em;
+}
+
+#feedback {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+}
+
+#feedback.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rainbow {
+    0% { background-color: #ff6b6b; }
+    20% { background-color: #4ecdc4; }
+    40% { background-color: #45b7d1; }
+    60% { background-color: #96ceb4; }
+    80% { background-color: #ffd93d; }
+    100% { background-color: #ff6b6b; }
+}
+
+/* Enhanced animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-180deg) scale(0); opacity: 0; }
+    to { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .keyboardsgal {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .contact-section {
+        margin: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .gallery-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keyboardsgal figure {
+        margin: 0 1rem;
+    }
+
+    .keyboardsgal figcaption {
+        position: relative;
+        transform: none;
+        background: rgba(0,0,0,0.7);
+        margin-top: -4px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .keyboardsgal figure:hover figcaption {
+        transform: none;
+    }
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: 2px solid #3498db;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+
+/* Save preferences button styles */
+.save-preferences {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.save-preferences:hover {
+    background-color: #219a52;
+    transform: translateY(-2px);
+}
+
+/* Dark theme button styles */
+body.dark-theme .theme-toggle {
+    background-color: #3498db;
+    border-color: #2c3e50;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: #2c3e50;
+}
+
+/* Dark theme styles - making them more specific */
+body.dark-theme {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #000 !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-theme .contact-section {
+    background-color: #2c2c2c !important;
+    color: #f5f5f5 !important;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1) !important;
+}
+
+body.dark-theme .form-group label {
+    color: #f5f5f5 !important;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background-color: #3c3c3c !important;
+    color: #f5f5f5 !important;
+    border-color: #4c4c4c !important;
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group textarea:focus {
+    border-color: #3498db !important;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5) !important;
+}
+
+body.dark-theme .form-group small {
+    color: #b0b0b0 !important;
+}
+
+body.dark-theme .validation-message {
+    color: #f5f5f5 !important;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50) !important;
+}
+
+body.dark-theme .keyboardsgal figcaption {
+    background: rgba(0,0,0,0.8) !important;
+}
+
+body.dark-theme pre {
+    background-color: #2c2c2c !important;
+    color: #f5f5f5 !important;
+    border: 1px solid #4c4c4c !important;
+}
+
+/* Animation classes */
+.animate-slide-in {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+.animate-rotate-in {
+    animation: rotateIn 0.5s ease forwards;
+}
+
+/* Save preferences button animation */
+#savePreferences {
+    background-color: #27ae60;
+    animation: pulse 2s infinite;
+}
+
+#savePreferences:hover {
+    background-color: #219a52;
+    animation: none;
+}
+
+/* Products page specific enhancements */
+.preferences-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.preferences-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.preferences-content {
+    text-align: left;
+}
+
+.preferences-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.preferences-content li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.preferences-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+/* Dark theme additions for products page */
+body.dark-theme .preferences-section {
+    background-color: #2c2c2c !important;
+    color: #f5f5f5 !important;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1) !important;
+}
+
+body.dark-theme .preferences-section h2 {
+    color: #f5f5f5 !important;
+}
+
+body.dark-theme .preferences-content li:before {
+    color: #2ecc71 !important;
+}

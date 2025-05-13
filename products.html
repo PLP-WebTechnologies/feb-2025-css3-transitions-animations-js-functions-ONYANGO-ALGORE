@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- this is an icon(favricon) code placement used for an website page icon on the tab-->
+        <link rel="icon" type="image/jpg" href="images/wallpapers/favricon.jpg"> 
+        <title>PRODUCTS</title>
+        <link rel="stylesheet" href="techwarestyles.css">
+        <!-- Add JavaScript file -->
+        <script src="interactive.js" defer></script>
+    </head>
+    <body>
+        <!-- Add theme toggle button directly in HTML -->
+        <button id="themeToggle" class="theme-toggle">🌓 Toggle Theme</button>
+
+        <header>
+            <h1>PRODUCTS</h1>
+            
+            <nav>
+                
+                <button>
+                    <a href="index.html">HOME</a>
+                </button>
+                
+                <button>
+                <a href="products.html">PRODUCTS</a>
+                </button>
+
+            </nav>
+
+        </header>
+        <main>
+        <section class="hero">
+            <h2>Welcome to the home of all things tech.</h2>
+            <p>Discover our premium collection of mechanical keyboards and tech accessories.</p>
+            <button id="dynamicButton">Click to Transform!</button>
+        </section>
+
+        <pre class="animate-slide-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Pariatur eos debitis laboriosam itaque. 
+        Ipsam consequuntur sint, eaque veritatis cumque voluptate 
+        expedita doloribus placeat officiis error reiciendis temporibus commodi blanditiis dolores!</pre>
+
+        <h3 class="animate-slide-in">PRODUCTS ON SALE</h3>
+        <H4 class="animate-slide-in">KEYBOARDS:</H4>
+        <section class="gallery"> <!-- section -->
+            <div class="keyboardsgal">
+                <figure class="animate-slide-in">
+                    <img src="images/mechanical keyboard.jpg" alt="mechanical keyboard" width="400" height="400">
+                    <figcaption>Premium Mechanical Keyboard</figcaption>
+                </figure>
+                <figure class="animate-slide-in">
+                    <img src="images/split keyboard.jpg" alt="split keyboard" width="400" height="400">
+                    <figcaption>Ergonomic Split Keyboard</figcaption>
+                </figure>
+                <figure class="animate-slide-in">
+                    <img src="images/Unique Keyboard.jpg" alt="Unique Keyboard" width="400" height="400">
+                    <figcaption>Unique Custom Keyboard</figcaption>
+                </figure>
+            </div>
+        </section>
+
+         <!-- Contact Form Section -->
+         <section class="contact-section animate-slide-in">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="validation-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="validation-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <small>Must be at least 8 characters with one uppercase letter and number</small>
+                    <span class="validation-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span class="validation-message"></span>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <!-- Add save preferences button directly in HTML -->
+                <button type="button" id="savePreferences" class="save-preferences">Save Form Data</button>
+                <div id="feedback" class="feedback-message"></div>
+            </form>
+        </section>
+
+
+        <footer class="pageendlinks">
+            
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <br>
+
+           &copy;KEL PRODUCTIONS 2025<br>
+           <a href="mailto:ambitiouskesh@gmail.com">ambitiouskesh@gmail.com</a>
+        </footer>
+
+        </main>
+    </body>
+</html>
